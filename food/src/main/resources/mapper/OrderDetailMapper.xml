@@ -13,7 +13,7 @@
         <result column="price" jdbcType="DECIMAL" property="price" />
         <result column="date" jdbcType="TIMESTAMP" property="date" />
     </resultMap>
-    <insert id="insert" parameterType="com.zcw.food.pojo.OrderDetail">
+    <insert id="insert" parameterType="com.zcw.food.pojo.OrderDetail" useGeneratedKeys="true">
     insert into order_detail (id, status, address,
       account_id, product_id, deliveryman_id,
       settlement_id, reward_id, price,
