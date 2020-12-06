@@ -28,4 +28,13 @@
     reward_id, price, date
     from order_detail
   </select>
+
+    <select id="selectOrder" resultMap="BaseResultMap">
+        select id, status, address, account_id, product_id, deliveryman_id, settlement_id,
+    reward_id, price, date
+    from order_detail where id =#{orderId,jdbcType=INTEGER}
+    </select>
+
+    <update id="update">
+    </update>
 </mapper>
